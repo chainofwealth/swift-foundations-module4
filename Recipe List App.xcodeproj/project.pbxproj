@@ -18,6 +18,7 @@
 		FADFA7242817F884002BF676 /* RecipeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFA7232817F884002BF676 /* RecipeTabView.swift */; };
 		FADFA7262819FE5C002BF676 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = FADFA7252819FE5C002BF676 /* recipes.json */; };
 		FADFA7282819FEE5002BF676 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFA7272819FEE5002BF676 /* Ingredient.swift */; };
+		FADFA72A281A00D5002BF676 /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFA729281A00D5002BF676 /* RecipeFeaturedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		FADFA7232817F884002BF676 /* RecipeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTabView.swift; sourceTree = "<group>"; };
 		FADFA7252819FE5C002BF676 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipes.json; path = "../../../../../../Downloads/iOS Foundations 2021/Module 4/Lesson 05/recipes.json"; sourceTree = "<group>"; };
 		FADFA7272819FEE5002BF676 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		FADFA729281A00D5002BF676 /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				FADFA7082816A49A002BF676 /* RecipeListView.swift */,
 				FADFA721281736AE002BF676 /* RecipeDetailView.swift */,
 				FADFA7232817F884002BF676 /* RecipeTabView.swift */,
+				FADFA729281A00D5002BF676 /* RecipeFeaturedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				FADFA71E2816A72C002BF676 /* RecipeModel.swift in Sources */,
 				FADFA7092816A49A002BF676 /* RecipeListView.swift in Sources */,
 				FADFA7282819FEE5002BF676 /* Ingredient.swift in Sources */,
+				FADFA72A281A00D5002BF676 /* RecipeFeaturedView.swift in Sources */,
 				FADFA7072816A49A002BF676 /* Recipe_List_App.swift in Sources */,
 				FADFA7202816A895002BF676 /* DataService.swift in Sources */,
 				FADFA7242817F884002BF676 /* RecipeTabView.swift in Sources */,
