@@ -11,6 +11,7 @@ struct RecipeFeaturedView: View {
     
     @EnvironmentObject var model: RecipeModel
     @State var isDetailViewShowing = false
+    @State var tabSelectionIndex = 0
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0){
@@ -22,7 +23,8 @@ struct RecipeFeaturedView: View {
             
             
             GeometryReader { geo in
-                TabView {
+//                MARK - Featured tab
+                TabView (selection: $tabSelectionIndex) {
                     
                     //Loop through each receipe only show those that should be featured.
                     ForEach (0..<model.recipes.count) { index in
@@ -45,6 +47,7 @@ struct RecipeFeaturedView: View {
                                         
                                     }
                                 }
+                                .tag(index)
                                 .sheet(isPresented: $isDetailViewShowing){
                                     RecipeDetailView(recipe:model.recipes[index])
                                     
@@ -64,17 +67,30 @@ struct RecipeFeaturedView: View {
                 
                 Text("Preparation Time")
                     .font(.headline)
-                Text("1 hour")
+                Text(model.recipes[tabSelectionIndex].prepTime)
                 Text("Highlights")
                     .font(.headline)
+                RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
                 Text("Preparation Time")
-                
+                    .font(.headline)
             }
             .padding([.leading,.bottom])
             
         }
+        .onAppear {
+            setFeaturedIndex()
+        }
         
     }
+    
+    func setFeaturedIndex() {
+        //fint the first recipe that is featured.
+        let index = model.recipes.firstIndex { (recipe) -> Bool in
+            return recipe.featured
+        }
+        tabSelectionIndex = index ?? 0
+    }
+    
 }
 
 struct RecipeFeaturedView_Previews: PreviewProvider {
